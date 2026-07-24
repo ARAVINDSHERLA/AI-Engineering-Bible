@@ -5846,3 +5846,73 @@ These are more commonly discussed in enterprise AI interviews today, while Hydra
 I also recommend adding one final section called **"Production Case Studies"**, containing 20–25 end-to-end architectures 
 (DoorDash AI Assistant, OpenAI Deep Research, Claude Computer Use, GitHub Copilot, Cursor, Glean, Perplexity, Salesforce Agentforce, Microsoft Copilot, etc.).
 Understanding how these systems are built will prepare you for architecture interviews at the highest level.
+
+
+
+
+The AI Engineering Stack: AI stack as three layers
+ Application Development: with model readily available can use them to develop applications Ai Interface, model with good prompts engineering& necessary context construction, Evaluation 
+ Model Development: Inference Optimization, Dataset engineering, Modelling, training, Evaluation
+  Infrastructure: Compute Management, Data Management, Serving &Monitoring
+AI Engineering vs ML Engineering:
+Layer	ML Engineering Stack	AI Engineering Stack
+Goal	Build ML models/model creation	Build AI applications using foundation models/model adaptation
+Input	Raw data	Foundation models + prompts + enterprise data
+Core Focus	Training models	Model adaptation
+Output	Trained ML model	Production AI application
+Primary Users	ML Engineers, Data Scientists	AI Engineers, Software Engineers, Full-stack Engineers
+	Data ModelProduct	ProductDataModel
+
+Key takeaway from the book
+Chip Huyen summarizes the transition in three fundamental shifts:
+1.	From building models → to adapting foundation models. 
+2.	From feature engineering → to prompt engineering and context construction. 
+3.	From optimizing predictive models → to building complete AI applications with rigorous evaluation, retrieval, agents, and user feedback loops.
+ Yes. Chip Huyen presents it as Application Development → Model Development → Infrastructure. If we compare it to the traditional ML stack, the responsibilities become much clearer.
+Layer	ML Engineering Stack	AI Engineering Stack
+Top Layer	Product / Application Development	Application Development
+Primary Focus	Business application using ML predictions	AI-native applications using foundation models
+Responsibilities	UI, APIs, Business Logic, Prediction APIs	Prompt Engineering, Context Engineering, RAG, Agents, Memory, Tool Calling, Guardrails, Evaluation, AI UX
+Deliverables	Fraud Detection App, Recommendation Engine	AI Copilot, AI Assistant, AI Search, AI Agent, AI Automation
+		
+Middle Layer	Data & Model Development	Model Development
+Primary Focus	Build ML models	Adapt Foundation Models
+Responsibilities	Data Collection, Feature Engineering, Data Labeling, Model Training, Hyperparameter Tuning, Model Validation	Model Selection, Fine-tuning, PEFT, LoRA, Dataset Engineering, Inference Optimization, Model Evaluation
+Deliverables	Trained XGBoost/CNN/Transformer Model	Fine-tuned Llama/Gemma/Qwen/GPT-based Models
+		
+Bottom Layer	Infrastructure / MLOps	Infrastructure
+Primary Focus	ML Platform	AI Platform
+Responsibilities	Data Pipelines, Feature Store, Model Registry, Serving, Monitoring, CI/CD, Kubernetes	GPU Clusters, Model Serving, vLLM, KServe, Vector Database, Prompt Cache, Token Cache, Monitoring, Cost Management, Security
+Deliverables	ML Platform	AI Platform
+
+Traditional ML Engineering Stack:
+Business/Product
+→ Application Development
+→ Data Engineering
+→ Feature Engineering
+→ Model Development (Train & Validate Models)
+→ Model Serving
+→ Infrastructure (MLOps)- (Compute • Storage • CI/CD • Model Registry • Monitoring)
+AI Engineering Stack:
+Business/Product
+→ Application Development - (Prompts • Context • RAG • Agents • Memory • Evaluation)
+→ Model Development - (Model Selection • Fine-tuning • Dataset Engineering • Inference Optimization)
+→ Inference Serving - (Request Routing • Queue • Scheduler • Batching • Autoscaling)
+→ Infrastructure - (GPUs • Compute • Storage • Networking • Monitoring)
+Enterprise AI Engineering Stack:
+Business/Product
+    → Application Development - (Prompts • Context Engineering • RAG • Agents • Memory • Evaluation)
+    → Model Development - (Model Selection • Fine-tuning • Dataset Engineering • Inference Optimization)
+    → Inference Engineering - (Inference Serving → Inference Engine → Disaggregated Inference)
+    → AI Platform - (Model Registry • Deployment • Security • Governance • Observability)
+    → Infrastructure - (Kubernetes • GPUs • Networking • Storage • Monitoring)
+
+The fundamental shift
+ML Engineering	AI Engineering
+Product → Data → Model → Infrastructure	Product → Application → Foundation Model → Infrastructure
+Feature Engineering	Context Engineering
+Train Models	Adapt Models
+Prediction APIs	Agentic AI Applications
+MLOps	AI Engineering Platform
+
+
